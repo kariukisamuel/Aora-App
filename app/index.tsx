@@ -1,13 +1,16 @@
 import { styled } from 'nativewind';
-import { Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
+import { Link } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const StyledView = styled(View)
 const StyledText = styled(Text)
+const StyledSafeArea = styled(SafeAreaView)
 
 export default function Index() {
   return (
-    <StyledView className="flex flex-1 items-center justify-center bg-white">
-      <StyledText className="text-5xl">Index</StyledText>
-    </StyledView>
+   <StyledSafeArea className='bg-primary h-full'>
+       <ScrollView contentContainerStyle={{height:'100%'}}></ScrollView>
+   </StyledSafeArea>
   );
 }
